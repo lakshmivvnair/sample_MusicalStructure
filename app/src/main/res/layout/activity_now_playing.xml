@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.musicalstructure.NowPlayingActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="Album Artwork"
+        android:scaleType="centerCrop"
+        android:src="@drawable/album_artwork" />
+
+    <include layout="@layout/scrollable_tab_layout" />
+
+    <RelativeLayout
+        android:id="@+id/playControlsMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        android:paddingTop="@dimen/size4">
+
+        <LinearLayout
+            android:id="@+id/playControls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/size16">
+
+            <ImageView
+                style="@style/playControlsImageStyle"
+                android:src="@drawable/ic_shuffle" />
+
+            <ImageView
+                style="@style/playControlsImageStyle"
+                android:src="@drawable/ic_fast_rewind" />
+
+            <ImageView
+                style="@style/playControlsImageStyle"
+                android:src="@drawable/ic_play_arrow" />
+
+            <ImageView
+                style="@style/playControlsImageStyle"
+                android:src="@drawable/ic_fast_forward" />
+
+            <ImageView
+                style="@style/playControlsImageStyle"
+                android:src="@drawable/ic_repeat" />
+
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/seek_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/playControls"
+            android:max="100"
+            android:progress="20" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/seek_bar">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/size4"
+                android:layout_marginLeft="@dimen/size8"
+                android:layout_weight="1"
+                android:text="@string/_0_51" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/size4"
+                android:layout_marginRight="@dimen/size8"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@string/_4_51" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/playControlsMain"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/size24"
+        android:layout_marginRight="@dimen/size16"
+        android:src="@drawable/ic_heart" />
+</RelativeLayout>

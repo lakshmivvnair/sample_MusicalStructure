@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary">
+
+            <TextView
+                android:id="@+id/tvRecentlyPlayed"
+                style="@style/tabHostStyle"
+                android:text="@string/recently_played" />
+
+            <TextView
+                android:id="@+id/tvArtists"
+                style="@style/tabHostStyle"
+                android:text="@string/artists" />
+
+            <TextView
+                android:id="@+id/albums"
+                style="@style/tabHostStyle"
+                android:text="@string/albums" />
+
+            <TextView
+                android:id="@+id/tvSongs"
+                style="@style/tabHostStyle"
+                android:text="@string/songs" />
+
+            <TextView
+                android:id="@+id/tvPlaylist"
+                style="@style/tabHostStyle"
+                android:text="@string/playlists" />
+
+            <TextView
+                android:id="@+id/tvPodcasts"
+                style="@style/tabHostStyle"
+                android:text="@string/podcasts" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <RelativeLayout
+        android:id="@+id/openNowPlaying"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="@dimen/imageThumbnail"
+            android:layout_height="@dimen/imageThumbnail"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/album_artwork" />
+
+        <TextView
+            android:id="@+id/tvSongName"
+            style="@style/nowPlayingShotStyle"
+            android:text="@string/song_name" />
+
+        <TextView
+            style="@style/nowPlayingShotStyle"
+            android:layout_below="@id/tvSongName"
+            android:text="@string/artists" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_play_arrow" />
+    </RelativeLayout>
+</RelativeLayout>

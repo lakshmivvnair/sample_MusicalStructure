@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Musical Structure</string>
+    <string name="recently_played">Recently Played</string>
+    <string name="artists">Artists</string>
+    <string name="albums">Albums</string>
+    <string name="songs">Songs</string>
+    <string name="playlists">Playlists</string>
+    <string name="podcasts">Podcasts</string>
+    <string name="song_name">Song name</string>
+    <string name="show_all_songs">Show All songs.\nWill use MediaStore.Audio to show audio files</string>
+    <string name="show_recently_played_songs">Show recently played songs.</string>
+    <string name="show_songs_by_podcasts">Show songs by podcasts.</string>
+    <string name="show_songs_by_playlist">Show songs by Playlist.</string>
+    <string name="_4_51">-4:51</string>
+    <string name="_0_51">0:51</string>
+    <string name="show_songs_by_artists">Show songs by Artists.\nMediaStore.Audio.Media.ARTIST</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="show_songs_by_albums">Show songs by Albums. \nMediaStore.Audio.Media.ALBUM</string>
+</resources>
